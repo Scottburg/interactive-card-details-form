@@ -1,37 +1,41 @@
-#root {
-  max-width: 1280px;
-  min-height:  // margin: 0 auto;
-    100vh;
-  // padding: 2rem;
-}
+// #root {
+//   max-width: 1280px;
+//   min-height:  // margin: 0 auto;
+//     100vh;
+//   // padding: 2rem;
+// }
 
-.bg-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  min-height: 100vh;
-  z-index: -1;
-  background-image: url('./assets/bg-main-desktop.png');
-  background-size: 25vw 100vh;
-  background-position: left;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-items: center;
+// .page-container {
+//   .bg-image {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100vw;
+//     min-height: 100vh;
+//     z-index: -1;
+//     background-image: url('./assets/bg-main-desktop.png');
+//     background-size: 25vw 100vh;
+//     background-position: left;
+//     background-repeat: no-repeat;
+//     display: flex;
+//     align-items: center;
+//     justify-items: center;
 
-  .credit-card-section {
-    padding: 2rem;
-    margin-left: 5rem;
-    min-width: 25vw;
-    max-width: 35vw;
+//     .credit-card-section {
+//       // display: flex;
+//       position: relative;
+//       padding: 2rem;
+//       margin-left: 5rem;
+//       min-width: 25vw;
+//       max-width: 35vw;
 
-    .card-front {
-      padding: 1rem;
-    }
-    .card-back {
-      padding: 1rem;
-      margin-left: 5rem;
-    }
-  }
-}
+//       .card-front {
+//         padding: 1rem;
+//       }
+//       .card-back {
+//         padding: 1rem;
+//         margin-left: 5rem;
+//       }
+//     }
+//   }
+// }
