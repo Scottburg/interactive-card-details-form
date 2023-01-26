@@ -83,7 +83,7 @@ function App() {
           {success ? (
             <SuccessScreen setSuccess={setSuccess} />
           ) : (
-            <form className="flex flex-col justify-center  gap-8 max-w-lg lg:h-screen">
+            <form className="flex flex-col justify-center  gap-8 max-w-md lg:h-screen">
               <div>
                 <label htmlFor="cardholder_name">Cardholder Name</label>
                 <input
@@ -99,7 +99,6 @@ function App() {
                 />
               </div>
               <div>
-                {/* //Add formating for spaces in card number */}
                 <label htmlFor="card_number">Card Number</label>
                 <input
                   type="text"
