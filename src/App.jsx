@@ -102,13 +102,16 @@ function App() {
                 {/* //Add formating for spaces in card number */}
                 <label htmlFor="card_number">Card Number</label>
                 <input
-                  type="number"
+                  type="text"
                   name="card_number"
                   id="card_number"
                   placeholder="e.g. 1234 5678 9123 0000"
                   required
-                  maxLength="19"
-                  value={cardDetails.number}
+                  maxLength={19}
+                  value={cardDetails.number
+                    .replace(/\s/g, '')
+                    .replace(/(\d{4})/g, '$1 ')
+                    .trim()}
                   onChange={handleCardNumber}
                 />
               </div>
