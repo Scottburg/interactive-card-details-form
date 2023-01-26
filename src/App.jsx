@@ -41,47 +41,49 @@ function App() {
     <section>
       <div className="absolute -z-10 w-full h-full">
         <picture>
-          <source media="(min-width: 768px)" srcSet={bgDesktop} />
+          <source media="(min-width: 1024px)" srcSet={bgDesktop} />
           <img
-            className="w-full md:w-1/3  md:h-full object-cover"
+            className=" background w-full lg:w-1/3  h-72 lg:h-full object-cover"
             src={bgMobile}
             alt="background-image"
           />
         </picture>
       </div>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 max-w-7xl mx-auto">
-        <div className="mt-10 mx-5 grid grid-cols-1 gap-4 md:gap-0 ">
-          <article className="card-front p-5 flex flex-col justify-between">
-            <img className="w-14 md:w-20" src={cardLogo} alt="card-logo" />
-            <div>
-              <h2 className="text-white mb-6 md:text-2xl tracking-widest-xl">
-                {cardDetails.number
-                  ? cardDetails.number
-                  : '0000 0000 0000 0000'}
-              </h2>
-              <ul className="flex items-center justify-between">
-                <li className="text-white uppercase  text-xs md:text-sm tracking-wider-xl">
-                  {cardDetails.name ? cardDetails.name : 'Jane Appleseed'}
-                </li>
-                <li className="text-white  text-xs md:text-sm tracking-wider">
-                  {cardDetails.expiry
-                    ? format(new Date(cardDetails.expiry), 'MM yy')
-                    : '00/00'}
-                </li>
-              </ul>{' '}
-            </div>
-          </article>
-          <article className="card-back md:ml-20 relative">
-            <p className=" text-xs md:text-base text-white absolute right-9 md:right-12 top-28 tracking-wider">
-              {cardDetails.cvc ? cardDetails.cvc : '123'}
-            </p>
-          </article>
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 max-w-7xl mx-auto">
+        <div className="cards-container">
+          <div className="card-orientation">
+            <article className="card-front p-5 flex flex-col justify-between">
+              <img className="w-14 lg:w-20" src={cardLogo} alt="card-logo" />
+              <div>
+                <h2 className="text-white mb-6 lg:text-2xl tracking-widest-xl">
+                  {cardDetails.number
+                    ? cardDetails.number
+                    : '0000 0000 0000 0000'}
+                </h2>
+                <ul className="flex items-center justify-between">
+                  <li className="text-white uppercase  text-xs lg:text-sm tracking-wider-xl">
+                    {cardDetails.name ? cardDetails.name : 'Jane Appleseed'}
+                  </li>
+                  <li className="text-white  text-xs lg:text-sm tracking-wider">
+                    {cardDetails.expiry
+                      ? format(new Date(cardDetails.expiry), 'MM yy')
+                      : '00/00'}
+                  </li>
+                </ul>{' '}
+              </div>
+            </article>
+            <article className="card-back lg:ml-20 relative">
+              <p className=" text-xs lg:text-base text-white absolute right-12 lg:right-12  tracking-wider ">
+                {cardDetails.cvc ? cardDetails.cvc : '123'}
+              </p>
+            </article>
+          </div>
         </div>
         <div className="credit-card-form pt-8 px-5 pb-20">
           {success ? (
             <SuccessScreen setSuccess={setSuccess} />
           ) : (
-            <form className="flex flex-col justify-center  gap-8 max-w-lg md:h-screen">
+            <form className="flex flex-col justify-center  gap-8 max-w-lg lg:h-screen">
               <div>
                 <label htmlFor="cardholder_name">Cardholder Name</label>
                 <input
@@ -166,7 +168,7 @@ function App() {
 const SuccessScreen = ({ setSuccess }) => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center md:h-screen max-w-lg mx-auto ">
+      <div className="flex flex-col items-center justify-center lg:h-screen max-w-lg mx-auto ">
         {' '}
         <img src={tick} className="block mx-auto" />
         <h1 className="dark-violet text-2xl uppercase text-center my-6 tracking-widest">
